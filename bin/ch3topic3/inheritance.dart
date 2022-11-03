@@ -11,17 +11,14 @@ class MyClass{
 class OtherClass implements MyClass {
   @override
   String getAnything() {
-    // TODO: implement getAnything
-    throw UnimplementedError();
+    return 'anything';
   }
 
   @override
-  // TODO: implement myInt
-  int get myInt => throw UnimplementedError();
+  int get myInt => 100;
 
   @override
-  // TODO: implement publicInt
-  int get publicInt => throw UnimplementedError();
+  int get publicInt => 1000;
   
 
 }

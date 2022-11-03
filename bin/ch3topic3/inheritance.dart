@@ -1,28 +1,27 @@
-class RegularClass{
-  final int myField;
-
-  RegularClass(this.myField);
-
-  int get publicProperty => 123;
-
-  String getSomething(){
-    return 'Hello';
+class MyClass{
+  final int myInt;
+  MyClass(this.myInt);
+  int get publicInt => 123;
+  String getAnything(){
+    return 'Binar';
   }
 }
 
-class OtherClass implements RegularClass {
+
+class OtherClass implements MyClass {
   @override
-  String getSomething() {
-    // TODO: implement getSomething
+  String getAnything() {
+    // TODO: implement getAnything
     throw UnimplementedError();
   }
 
   @override
-  // TODO: implement myField
-  int get myField => throw UnimplementedError();
+  // TODO: implement myInt
+  int get myInt => throw UnimplementedError();
 
   @override
-  // TODO: implement publicProperty
-  int get publicProperty => throw UnimplementedError();
+  // TODO: implement publicInt
+  int get publicInt => throw UnimplementedError();
+  
 
 }

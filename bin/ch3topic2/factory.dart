@@ -9,8 +9,8 @@ class Youtube {
 
   factory Youtube.fromMap(Map<String, dynamic> map) {
     return Youtube(
-      email: map['_firstName'] ?? '',
-      youtubeChannel: map['_lastName'] ?? '',
+      email: map['email'] ?? '',
+      youtubeChannel: map['youtube_channel'] ?? '',
     );
   }
 }

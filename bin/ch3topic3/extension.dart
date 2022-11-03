@@ -6,6 +6,7 @@ void main(List<String> args) {
 extension StringCinta on String {
 
   String tambahKataSayang(){
-    return this + ' sayang';
+    return '${this} sayang';
   }
 }
+

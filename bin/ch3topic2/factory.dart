@@ -14,3 +14,15 @@ class Youtube {
     );
   }
 }
+
+void main(List<String> args) {
+  var data = {
+    'email': 'sabrina@gmail.com',
+    'youtube_channel': 'code with sabrna',
+  };
+
+  final youtube = Youtube.fromMap(data);
+
+  print(youtube.email);
+  print(youtube.youtubeChannel);
+}

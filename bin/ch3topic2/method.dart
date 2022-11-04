@@ -3,7 +3,7 @@ class Youtube {
   String? youtubeChannel;
   int _subscriber = 0;
 
-  void removeAccount(){
+  void removeAccount() {
     email = '';
     youtubeChannel = '';
   }
@@ -11,6 +11,10 @@ class Youtube {
   set updateSubscriber(int value) => _subscriber = value;
 
   int get subscriber => _subscriber;
+
+  static bool isEligibleAds(Youtube youtube) {
+    return youtube.subscriber >= 1000;
+  }
 }
 
 void main(List<String> args) {
@@ -36,4 +40,5 @@ void main(List<String> args) {
   print('Email: ${youtube.email}');
   print('Channel Name: ${youtube.youtubeChannel}');
   print('Subscriber: ${youtube.subscriber}');
+  print('Is Eligible Ads: ${Youtube.isEligibleAds(youtube)}');
 }

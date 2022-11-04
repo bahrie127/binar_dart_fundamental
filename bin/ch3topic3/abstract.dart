@@ -20,3 +20,10 @@ class Cat implements Animal {
     print('meong meong meong');
   }
 }
+
+void main(List<String> args) {
+  Animal cat = Cat('emon', 4);
+  print('Cat: ');
+  print(cat.name);
+  print(cat.age);
+}

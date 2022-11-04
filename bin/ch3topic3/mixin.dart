@@ -1,47 +1,43 @@
+class Employee {
+  void checkIn() {
+    print('employee checkin');
+  }
+
+  void checkOut() {
+    print('employee checkout');
+  }
+}
+
+mixin Medical {
+   int takeTemperature() {
+    return 36;
+   }
+}
+
+class Nurse extends Employee with Medical {}
+
+class Doctor extends Employee with Medical{}
+
+class Teacher extends Employee {}
+
 void main(List<String> args) {
-  Admin newAdmin =
-      Admin(specialAdminField: 1, firstName: 'saiful', lastName: 'bahri');
-  newAdmin.sendMessage('halo binar');
+  var nurse = Nurse();
+  var doctor = Doctor();
+  var teacher = Teacher();
+
+  print('Teacher:');
+  teacher.checkIn();
+  teacher.checkOut();
+  
+  print('Nurse:');
+  nurse.checkIn();
+  nurse.checkOut();
+  nurse.takeTemperature();
+
+  print('Doctor:');
+  doctor.checkIn();
+  doctor.checkOut();
+  doctor.takeTemperature();
+
+  
 }
-
-mixin Message {
-  void sendMessage(String text) {
-    print('sending a message: $text');
-  }
-}
-
-class User {
-  final String _firstName;
-  final String _lastName;
-  const User(
-    this._firstName,
-    this._lastName,
-  );
-
-  String get fullName => '$_firstName $_lastName';
-
-  void signOut() {
-    print('sign out');
-  }
-}
-
-class Admin extends User with Message {
-  final double specialAdminField;
-
-  Admin({
-    required this.specialAdminField,
-    required String firstName,
-    required String lastName,
-  }) : super(firstName, lastName);
-
-  @override
-  String get fullName => 'Admin: ${super.fullName}';
-
-  @override
-  void signOut() {
-    print('admin sign out');
-    super.signOut();
-  }
-}
-
-

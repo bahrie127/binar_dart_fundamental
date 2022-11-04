@@ -1,12 +1,10 @@
-void main(List<String> args) {
-  final x = 'hello'.tambahKataSayang();
-  print(x);
-}
-
-extension StringCinta on String {
-
-  String tambahKataSayang(){
-    return '${this} sayang';
+extension DateTimeExtension on DateTime {
+  String humanize() {
+    return '${this.day}/${this.month}/${this.year}';
   }
 }
 
+void main(List<String> args) {
+  final firstDec = DateTime(2022, 12, 1);
+  print(firstDec.humanize());
+}

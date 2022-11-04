@@ -31,27 +31,27 @@ class YoutubeWithoutEquality {
 }
 
 void main(List<String> args) {
-  Youtube bahri = Youtube(
-    email: 'bahri@gmail.com',
-    youtubeChannel: 'code with bahri',
+  Youtube sabrina = Youtube(
+    email: 'sabrina@gmail.com',
+    youtubeChannel: 'code with sabrina',
   );
 
-  Youtube bahriDuplicate = Youtube(
-    email: 'bahri@gmail.com',
-    youtubeChannel: 'code with bahri',
+  Youtube sabrinaDuplicate = Youtube(
+    email: 'sabrina@gmail.com',
+    youtubeChannel: 'code with sabrina',
   );
 
-  print(bahri == bahriDuplicate);
+  print(sabrina == sabrinaDuplicate);
 
-  YoutubeWithoutEquality bahriWithoutEquality = YoutubeWithoutEquality(
-    email: 'bahri@gmail.com',
-    youtubeChannel: 'code with bahri',
+  YoutubeWithoutEquality sabrinaWithoutEquality = YoutubeWithoutEquality(
+    email: 'sabrina@gmail.com',
+    youtubeChannel: 'code with sabrina',
   );
 
-  YoutubeWithoutEquality bahriDuplicateWithoutEquality = YoutubeWithoutEquality(
-    email: 'bahri@gmail.com',
-    youtubeChannel: 'code with bahri',
+  YoutubeWithoutEquality sabrinaDuplicateWithoutEquality = YoutubeWithoutEquality(
+    email: 'sabrina@gmail.com',
+    youtubeChannel: 'code with sabrina',
   );
 
-  print(bahriWithoutEquality == bahriDuplicateWithoutEquality);
+  print(sabrinaWithoutEquality == sabrinaDuplicateWithoutEquality);
 }

@@ -1,18 +1,22 @@
-abstract class DataReader {
-  String readData();
-  void write();
+abstract class Animal {
+  final String name;
+  final int age;
+
+  Animal(this.name, this.age);
+
+  void talk();
 }
 
-class MyData implements DataReader {
+class Cat implements Animal {
   @override
-  String readData() {
-    print('performing logic');
-    return 'Yes oke';
-  }
-  
+  final String name;
   @override
-  void write() {
-    print('write something');
-  }
+  final int age;
 
+  Cat(this.name, this.age);
+
+  @override
+  void talk() {
+    print('meong meong meong');
+  }
 }
